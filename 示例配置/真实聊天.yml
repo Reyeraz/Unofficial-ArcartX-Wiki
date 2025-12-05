@@ -1,0 +1,105 @@
+ui:
+  match: ChatScreen
+  background: false
+  transfer: false
+  through: false
+  escClose: "false"
+  action:
+    open: |-
+      var.出现 = Q2(1200, 0, 1, 500)
+    keyPress: |-
+      if(self.currentKeyPress() == "ENTER"){
+        Chat.say("{var.聊天}")
+        val.input.setContent("")
+      }
+      if(self.currentKeyPress() == "ESCAPE" ){
+      var.出现 = Q2(0, 1200, 1, 500)
+        async{
+          Thread.sleep(300)
+          Screen.close()
+        }
+      }
+controls:
+  整体:
+    type: adaptive
+    attribute:
+      point: ~middle_center
+      width: 1920
+      height: 1080
+      y: var.出现
+    children:
+      background:
+        type: texture
+        attribute:
+          point: ~middle_center
+          width: 1276
+          height: 788
+          normal: "~ui/ui.png"
+      飞起来:
+        type: ChatTextBox
+        val: input
+        attribute:
+          point: ~middle_center
+          length: 0
+          x: 10000
+          y: 10000
+          fontSize: 0
+          width: 0
+          height: 0
+      input:
+        type: TextBox
+        val: input
+        attribute:
+          point: ~middle_center
+          length: 64
+          x: -290
+          y: 340
+          fontSize: 45
+          width: 615
+          height: 30
+        action:
+         create: |-
+          self.setFocus(true)
+         textChange: |-
+          var.聊天 = self.getContent()
+        children:
+          suggestion:
+            type: Suggestion
+            attribute:
+              fontSize: 28
+              background: ~0,0,0,80
+          点击发送:
+            type: Texture
+            attribute:
+              point: ~middle_center
+              width: 141
+              height: 48
+              y: -11
+              x: 1062
+              normal: "~ui/normal1.png"
+              hover: "~ui/hover1.png"
+            action:
+              click: |-
+                Chat.say("{var.聊天}")
+                val.input.setContent("")
+            children:
+              发送:
+                type: text
+                attribute:
+                  point: ~middle_center
+                  texts: ~发送
+                  fontSize: 50
+                  x: 70
+                  y: 10
+                  center: true
+      chat:
+        type: chat
+        attribute:
+          width: 1212
+          height: 652
+          point: ~middle_center
+          background: ~0,0,0,0
+          fontSize: 50
+          spaceBetween: 10
+          y: -30
+          x: 0

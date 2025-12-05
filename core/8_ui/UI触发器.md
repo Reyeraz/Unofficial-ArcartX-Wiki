@@ -1,0 +1,40 @@
+# UI触发器
+
+UI篇
+
+# UI触发器
+
+UI触发器应用
+
+对自己的害怕成了哲学的灵魂。
+
+## UI触发器
+
+  * 先列一下UI有那些触发器
+
+名称| 说明| 备注  
+---|---|---  
+keyPress| 键盘按下| 通过`self.currentKeyPress`获取按下的按键  
+keyRelease| 键盘释放| 通过`self.currentKeyReleased`获取释放的按键  
+wheel| 滚轮| 通过`self.wheelValue`可通过正负判断滚动方向  
+message| 接收消息| 通过`Chat.getEventMessage()`获取本次触发事件的消息内容  
+chatOpen| 聊天框打开|  
+chatClose| 聊天框关闭|  
+open| 打开| 该触发器触发于UI所有控件初始化之后  
+click| 点击|  
+clickLeft| 左键点击|  
+clickRight| 右键点击|  
+clickMiddle| 中键点击|  
+release| 释放|  
+releaseLeft| 左键释放|  
+releaseRight| 右键释放|  
+releaseMiddle| 中键释放|  
+resize| 游戏尺寸变化|  
+close| 关闭|  
+tick| 逻辑帧| 正常来说是每秒触发100次，和渲染帧不一样，运算层和逻辑层是分开的  
+seconds| 每秒| 每秒触发一次，用于一些需要低频循环调用的逻辑  
+load| 读取| UI自身加载完成后触发，和open不同的是该触发器触发于UI控件初始化之前  
+触发器就是会在指定的时机执行对应的脚本语句，比如点击的时候给玩家发送个聊天消息，没啥好讲的非常简单。
+
+[PreviousUI属性](/docs/core/8_ui/2_ui_attribute)[NextUI通讯处理](/docs/core/8_ui/4_ui_packet)
+

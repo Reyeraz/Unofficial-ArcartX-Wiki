@@ -1,0 +1,196 @@
+ui:
+  match: 强化界面
+  hide: []
+  itemSize: "16"
+  through: "true"
+  escClose: "true"
+  background: false
+  closeDied: "true"
+  show: "true"
+  jei: "false"
+  action: 
+    tick: |-
+      var.强化物品 = val.成品.getSlotItemStack()
+controls:
+  adaptive:
+    type: adaptive
+    attribute:
+      point: ~middle_center
+      width: 1920
+      height: 1080
+    children:
+      背包贴图:
+        type: Texture
+        attribute:
+          point: ~middle_center
+          width: 1276
+          height: 788
+          normal: "~ui/ui4/ui.png"
+      全部物品:
+        type: Grid
+        attribute:
+          point: ~middle_center
+          x: -443
+          y: 37
+          spaceBetweenY: 5
+          spaceBetweenX: 5
+          column: 4
+        action:
+          create: |-
+            // 创建箱子栏位的槽位
+            for(a in range(1,35)){
+              slot = self['全部物品槽位'].copy('slot' + a)
+              slot.id = 54 + a
+            }
+        children:
+          全部物品槽位:
+            type: slot
+            attribute:
+              normal: "~ui/ui4/normal2.png"
+              hover: "~ui/ui4/hover2.png"
+              width: 75
+              height: 75
+              itemScale: 0.7
+              id: 54
+      强化物品槽位:
+        type: slot
+        attribute:
+          point: ~middle_center
+          normal: "~ui/ui4/normal2.png"
+          hover: "~ui/ui4/hover2.png"
+          y: -120
+          width: 240
+          height: 240
+          itemScale: 0.7
+          id: 13
+
+      装备栏:
+        type: text
+        attribute:
+          point: ~middle_center
+          texts: ~装备栏
+          fontSize: 60
+          x: 44
+          y: -270
+          center: true
+      强化材料:
+        type: Grid
+        attribute:
+          point: ~middle_center
+          x: 0
+          y: 220
+          spaceBetweenY: 5
+          spaceBetweenX: 5
+          column: 4
+        action:
+          create: |-
+            // 创建箱子栏位的槽位
+            for(a in range(1,3)){
+              slot = self['强化材料槽位'].copy('slot' + a)
+              slot.id = 36 + a
+            }
+        children:
+          强化材料槽位:
+            type: slot
+            attribute:
+              normal: "~ui/ui4/normal2.png"
+              hover: "~ui/ui4/hover2.png"
+              width: 100
+              height: 100
+              itemScale: 0.7
+              id: 36
+      所需材料:
+        type: text
+        attribute:
+          point: ~middle_center
+          texts: ~所需材料
+          fontSize: 60
+          x: 60
+          y: 90
+          center: true
+      保护符槽位:
+        type: slot
+        attribute:
+          point: ~middle_center
+          normal: "~ui/ui4/normal2.png"
+          hover: "~ui/ui4/hover2.png"
+          width: 100
+          height: 100
+          x: 406
+          y: 170
+          itemScale: 0.7
+          id: 11
+      保护:
+        type: text
+        attribute:
+          point: ~middle_center
+          texts: ~保护石
+          fontSize: 60
+          x: 452
+          y: 90
+          center: true
+      成品展示:
+        type: Texture
+        attribute:
+          point: ~middle_center
+          width: 280
+          height: 320
+          x: 406
+          y: -120
+          normal: ~0,0,0,255
+        children:
+          下级预览:
+            type: text
+            attribute:
+              point: ~middle_center
+              texts: ~下级预览
+              fontSize: 60
+              x: 140
+              y: 20
+              center: true
+          下级预览文字:
+            type: text
+            attribute:
+              point: ~middle_center
+              texts: var.强化物品.getLore()
+              fontSize: 40
+              x: 10
+              y: 60
+              left: true
+      强化按钮:
+        type: Texture
+        attribute:
+          point: ~middle_center
+          width: 141
+          height: 48
+          y: 300
+          x: 179
+          normal: "~ui/ui4/normal1.png"
+          hover: "~ui/ui4/hover1.png"
+        children:
+          强化:
+            type: text
+            attribute:
+              point: ~middle_center
+              texts: ~强化
+              fontSize: 50
+              x: 70
+              y: 10
+              center: true
+          强化槽位:
+            type: slot
+            attribute:
+              point: ~middle_center
+              width: 141
+              height: 48
+              itemScale: 0
+              id: 31
+          成品:
+            type: slot
+            val: 成品
+            attribute:
+              point: ~middle_center
+              width: 0
+              height: 0
+              itemScale: 0
+              id: 15
