@@ -67,7 +67,3 @@ Lerp对象支持以下类型转换：
   * **字符串** ：返回当前插值计算结果的字符串表示
 
 Lerp对象支持数学运算，可以直接参与计算表达式。
-
-[PreviousUUID对象](/docs/shimmer/2_builtIn/2_object/5_uuid)[NextBack-
-回弹动画插值](/docs/shimmer/2_builtIn/3_animation/2_back)
-

@@ -43,12 +43,10 @@ UI变量以及函数
   * **返回值** ：数字类型
   * **调用示例**
 
-    
-    self.childrenCount()
+    `self.childrenCount()`
   * **示例返回值**
 
-    
-    1
+    `1`
 ### `close()`
 
   * 关闭当前UI
@@ -57,12 +55,10 @@ UI变量以及函数
   * **返回值** ：无
   * **调用示例**
 
-    
-    self.close()
+    `self.close()`
   * **示例返回值**
 
-    
-    无
+    `无`
 ### `getID()`
 
   * 获取当前UI的ID
@@ -71,12 +67,10 @@ UI变量以及函数
   * **返回值** ：字符串类型
   * **调用示例**
 
-    
-    self.getID()
+    `self.getID()`
   * **示例返回值**
 
-    
-    "exampleUI"
+    `"exampleUI"`
 ### `removeControlWithMeta()`
 
   * 匹配控件元数据删除控件
@@ -88,12 +82,10 @@ UI变量以及函数
   * **返回值** ：无
   * **调用示例**
 
-    
-    self.removeControlWithMeta("exampleKey", "exampleValue")
+    `self.removeControlWithMeta("exampleKey", "exampleValue")`
   * **示例返回值**
 
-    
-    无
+    `无`
 ### `getControlWithMeta()`
 
   * 匹配控件元数据获取控件
@@ -105,12 +97,10 @@ UI变量以及函数
   * **返回值** ：列表
   * **调用示例**
 
-    
-    self.getControlWithMeta("exampleKey", "exampleValue")
+    `self.getControlWithMeta("exampleKey", "exampleValue")`
   * **示例返回值**
 
-    
-    [控件对象A,控件对象B...]
+    `[控件对象A,控件对象B...]`
 ### `getSlotItemStack()`
 
   * 获取指定槽位的物品
@@ -119,12 +109,10 @@ UI变量以及函数
   * **返回值** ：物品堆
   * **调用示例**
 
-    
-    self.getSlotItemStack("exampleSlot", "exampleType")
+    `self.getSlotItemStack("exampleSlot", "exampleType")`
   * **示例返回值**
 
-    
-    // 会返回一个物品对象，如果为空会返回空气
+    `// 会返回一个物品对象，如果为空会返回空气`
 ### `getOriginalName()`
 
   * 仅Menu类型包含
@@ -134,12 +122,10 @@ UI变量以及函数
   * **返回值** ：字符串类型
   * **调用示例**
 
-    
-    self.getOriginalName()
+    `self.getOriginalName()`
   * **示例返回值**
 
-    
-    "原版UI名称"
+    `"原版UI名称"`
 ### `clickSlot()`
 
   * 仅Menu类型包含
@@ -151,10 +137,8 @@ UI变量以及函数
   * **调用示例**
 
     
-    self.clickSlot(0, "exampleType")
+    `self.clickSlot(0, "exampleType")`
   * **示例返回值**
 
-    
-    // 无返回值
-[PreviousUI通讯处理](/docs/core/8_ui/4_ui_packet)[Next控件结构](/docs/core/8_ui/6_controls_config)
+    `// 无返回值`
 

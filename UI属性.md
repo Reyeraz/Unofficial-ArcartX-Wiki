@@ -1,13 +1,3 @@
-# UI属性
-
-UI篇
-
-# UI属性
-
-UI属性
-
-谁若孜孜于寻找，就越容易迷失自己，一切孤独皆是罪过。
-
 ## UI属性
 
   * UI我们先不着急渲染空间，先来了解一下UI自身的属性。
@@ -15,7 +5,7 @@ UI属性
   * 这两种类型引用同一个配置，但是所生效的属性是不一样的，来看一下整体长啥样。
   * 注：如果不需要更改默认值可以不存在对应配置项。
 
-    
+    ```yaml
     ui:
       match: []
       hide: []
@@ -32,6 +22,10 @@ UI属性
       defaultOpen: "true"
       action:  # 这个后面讲
       packetHandler: # 这个后面讲
+    ```
+    
+    
+    
 ### UI属性值详解
 
 **match**
@@ -135,6 +129,4 @@ UI属性
   * **生效对象:** HUD类型
   * **默认值:** true
   * **说明:** 当UI作为HUD时，是否加载后立刻打开，如果不自动打开则使用指令/a screen open 或者API进行启动/关闭
-
-[Previous开始](/docs/core/8_ui/1_start)[NextUI触发器](/docs/core/8_ui/3_ui_action)
 
