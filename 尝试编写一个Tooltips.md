@@ -26,7 +26,7 @@ ToolTip篇
 
   * 这里注意：Tip下的控件总宽高是根据顶层控件总宽高自动运算的
 
-    
+  ```yaml
     tip:
       match: "default"
       # 这里填写default则是默认匹配
@@ -86,11 +86,9 @@ ToolTip篇
                 fontSize: 38
                 x: 16
                 y: 140
-    
+  ```
 ### 效果
 
 ![TIP](https://wiki.arcartx.com/tip3.jpg)
 ![TIP](https://wiki.arcartx.com/tip4.jpg)
-
-[Previous说明](/docs/core/9_tip/1_info)[Next玩家模型附加模型](/docs/core/10_controller/1_extra_model)
 
