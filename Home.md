@@ -1,15 +1,3 @@
-
-# 📚 ArcartX 非官方 Wiki 主页
-
-欢迎来到 **ArcartX 非官方 Wiki**！
-
-本 Wiki 旨在为所有 ArcartX 插件的使用者和开发者提供一个系统化的文档和知识库，涵盖插件的核心功能、模型、UI 和 Shimmer 脚本语言等方面的详细指南, 并且提供官方wiki没有及时更新的内容。
-
-## 🗺️ 快速导航
-
-使用左侧的导航栏或点击下方链接快速跳转到主要文档
------
-
 ## 🤝 贡献与反馈
 
 我们欢迎社区用户贡献知识和修正错误，共同完善这份文档。
@@ -18,7 +6,7 @@
 
 如果您在文档中发现**错误**、**遗漏**，或有**新的功能需要补充**，请直接在 **[项目的 Issue 追踪器]** 中提交一个新的 Issue。
 
-  * **提交 Issue**：https://github.com/Reyeraz/Unofficial-ArcartX-Wiki.git/issues
+  * **提交 Issue**：[https://github.com/Reyeraz/Unofficial-ArcartX-Wiki.git/issues](https://github.com/Reyeraz/Unofficial-ArcartX-Wiki.git/issues)
   * 请在 Issue 中清晰描述您的问题或建议补充的内容。
 
 ### 📝 本地查阅与贡献内容
@@ -53,4 +41,8 @@
 
 ### 🔨 提示
 
-  * 请确保在提交前，您的链接格式符合我们侧边栏所使用的**相对路径**格式, 建议直接提交在根目录下, 因为目录是根据AI生成的
+  * 请确保在提交前，您的链接格式符合我们侧边栏所使用的**相对路径**格式, 建议直接提交在根目录下, 因为目录是根据AI生成的。
+
+  * 🤖 **利用 AI 快速生成配置/模板！** 如果您需要为 **ArcartX** 或 **Shimmer 脚本**生成复杂的配置或代码模板，可以尝试使用 **Gemini (或其他大语言模型)**。您可以通过提供详细的需求和已有的配置示例，让 AI 帮助您生成基础结构、函数原型或配置项，从而加速您的贡献过程, 直接给AI提供本仓库的地址 https://github.com/Reyeraz/Unofficial-ArcartX-Wiki.git 即可。
+
+-----
