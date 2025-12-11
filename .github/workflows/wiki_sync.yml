@@ -1,0 +1,50 @@
+name: Wiki Bi-Directional Sync
+
+on:
+  # 触发器 1: 监听主仓库对 'wiki-content' 目录的修改
+  push:
+    branches:
+      - main # 假设您的主分支是 main
+    paths:
+      - 'wiki-content/**'
+
+  # 触发器 2: 监听 Wiki 仓库的修改 (当有人编辑 Wiki 页面时触发)
+  gollum:
+
+jobs:
+  wiki-sync:
+    runs-on: ubuntu-latest
+    
+    # 确保只有在推送到主分支或发生 gollum 事件时才运行
+    if: github.event_name == 'push' || github.event_name == 'gollum'
+    
+    steps:
+      - name: Checkout main repository
+        # Action 需要先检出主仓库，以便访问 'wiki-content' 目录
+        uses: actions/checkout@v4
+
+      - name: Bi-directional Wiki Sync Action
+        uses: newrelic/wiki-sync-action@v1.0.1
+        with:
+          # ---------------------------------------------
+          # Source: 主代码仓库中存放 Wiki 文件的目录
+          # ---------------------------------------------
+          source: wiki-content
+          
+          # ---------------------------------------------
+          # Destination: 目标 Wiki 仓库的名称（固定为：YourRepoName.wiki）
+          # 对于您的项目，目标是 Unofficial-ArcartX-Wiki.wiki
+          # ---------------------------------------------
+          destination: Unofficial-ArcartX-Wiki.wiki
+          
+          # ---------------------------------------------
+          # Token: 必须使用具有 'repo' 权限的 Personal Access Token (PAT)
+          # ---------------------------------------------
+          token: ${{ secrets.WIKI_SYNC_TOKEN }}
+          
+          # Git Authors
+          gitAuthorName: GitHub Actions [Wiki Sync]
+          gitAuthorEmail: 41898282+github-actions[bot]@users.noreply.github.com
+          
+          # Commit Message
+          commitMessage: Auto sync wiki content to/from main repo
