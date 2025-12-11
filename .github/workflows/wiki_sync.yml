@@ -35,7 +35,7 @@ jobs:
           # Destination: 目标 Wiki 仓库的名称（固定为：YourRepoName.wiki）
           # 对于您的项目，目标是 Unofficial-ArcartX-Wiki.wiki
           # ---------------------------------------------
-          destination: Unofficial-ArcartX-Wiki.wiki
+          destination: wiki
           
           # ---------------------------------------------
           # Token: 必须使用具有 'repo' 权限的 Personal Access Token (PAT)
