@@ -1,13 +1,6 @@
 name: Wiki Bi-Directional Sync
 
 on:
-  # 触发器 1: 监听主仓库对 'wiki-content' 目录的修改
-  push:
-    branches:
-      - main # 假设您的主分支是 main
-    paths:
-      - 'wiki-content/**'
-
   # 触发器 2: 监听 Wiki 仓库的修改 (当有人编辑 Wiki 页面时触发)
   gollum:
 
@@ -29,13 +22,13 @@ jobs:
           # ---------------------------------------------
           # Source: 主代码仓库中存放 Wiki 文件的目录
           # ---------------------------------------------
-          source: wiki-content
+          source: wiki
           
           # ---------------------------------------------
           # Destination: 目标 Wiki 仓库的名称（固定为：YourRepoName.wiki）
           # 对于您的项目，目标是 Unofficial-ArcartX-Wiki.wiki
           # ---------------------------------------------
-          destination: wiki
+          destination: wiki-content
           
           # ---------------------------------------------
           # Token: 必须使用具有 'repo' 权限的 Personal Access Token (PAT)
